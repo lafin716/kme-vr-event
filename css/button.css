@@ -62,7 +62,7 @@
 }
 
 .ly-quick-access {
-    width: 15rem;
+    width: 20rem;
     display: inline-block;
     position: absolute;
     bottom: 130px;
@@ -72,7 +72,7 @@
 .nav-header {
     display: flex;
     flex-direction: row;
-    padding: .5rem 1rem;
+    padding: .7rem 1rem;
     background: #fffa04;
     align-items: center;
     justify-content: space-between;
@@ -82,8 +82,8 @@
     position:relative;
 }
 
-.nav-header .title { font-size: .75rem; font-weight: bold; }
-.nav-header .icon { font-size: 1rem; color: red; }
+.nav-header .title { font-size: .8rem; font-weight: bold; }
+.nav-header .icon { font-size: 1.2rem; color: red; }
 .nav-content {
     padding: .5rem 1rem;
     margin: 0px;
@@ -111,3 +111,48 @@
 .nav-content .panel .icon {
     font-size: 1rem; color: red; margin-right: 5px;
 }
+
+/* Contact 영역 */
+.ly-contact {
+    position: absolute;
+    top: 50%;
+    left: 0px;
+    transform: translateY(-50%);
+    background-color: #ffed00;
+    z-index: 9999;
+    cursor: pointer;
+    border: 1px solid #dadada;
+ }
+
+ .contact-wrap {
+     display: flex;
+     flex-direction: column;
+     list-style: none;
+     margin: 0px;
+     padding: 0px;
+ }
+
+ .contact-wrap .contact-cell {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     width: 4.3rem;
+     padding: 1rem .8rem;
+ }
+
+ .contact-wrap .contact-cell .icon-box {
+    width: 1.8rem;
+    margin-bottom: .3rem;
+ }
+
+ .contact-wrap .contact-cell .icon-box.big {
+    width: 2rem;
+    margin-bottom: .4rem;
+ }
+
+ .contact-wrap .contact-cell .desc{
+     font-size: .8rem;
+ }
+
+ .line { width: 70%; border-top: 1px solid #555; margin: 0 auto; }

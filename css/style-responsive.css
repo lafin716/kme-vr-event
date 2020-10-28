@@ -24,7 +24,7 @@
 
     .ly-spot {
         position: relative;
-        width: 20rem;
+        width: 21rem;
         padding: .5rem 0rem;
     }
 
@@ -74,6 +74,53 @@
         height: .95rem;
         margin: 0 1rem;
     }
+
+    /* Contact 영역 */
+    .ly-contact {
+        position: fixed;
+        width: 100%;
+        bottom: 0px;
+        left: 0px;
+        background-color: #ffed00;
+        z-index: 9999;
+        cursor: pointer;
+        border-top: 1px solid #dadada;
+        transform: unset;
+        top: unset;
+    }
+
+    .contact-wrap {
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+        margin: 0px;
+        padding: 0px;
+        justify-content: space-around;
+    }
+
+    .contact-wrap .contact-cell {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem .8rem;
+    }
+
+    .contact-wrap .contact-cell .icon-box {
+        width: 1.2rem;
+        margin-bottom: .3rem;
+    }
+
+    .contact-wrap .contact-cell .icon-box.big{
+        width: 1.5rem;
+        margin-bottom: .4rem;
+    }
+
+    .contact-wrap .contact-cell .desc{
+        font-size: .8rem;
+    }
+
+    .line, .ly-quick-access { display: none; }
 }
 
 @media screen and (max-width:1030px) {}
