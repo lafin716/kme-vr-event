@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KOREA MICE EXPO 2020 :: TYPE C Sub 03</title>
+    <!-- <script src="js/vr-viewer.lib.js"></script> -->
+    <link rel="stylesheet" href="css/font-awesome/all.css">
+    <link rel="stylesheet" href="css/font.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/button.css">
+    <link rel="stylesheet" href="css/style-responsive.css">
+</head>
+<body>
+    <!-- VR 영역 -->
+    <div id="pdtViewer" class="no-vr">
+        <img src="img/type_c/3.jpg">
+    </div>
+
+    <div class="float_area">
+        <!-- 페이지 1 -->
+        <div class="ly-page">
+            <!-- 링크영역 1 -->
+            <div id="spot01" class="ly-spot">
+                <div class="spot-header">
+                    <img src="res/svg/plus.svg" alt="" class="icon">
+                </div>
+                <div class="spot-content">
+                    <span class="spot-label">1. WELCOME</span>
+                    <img src="res/svg/arrow.svg" class="arrow-next">
+                </div>
+            </div>
+        </div>
+
+        <!-- Quick Access 영역 -->
+        <div class="ly-quick-access">
+            <div class="nav-header">
+                <span class="title">QUICK ACCESS</span>
+                <i class="fas fa-angle-up icon"></i>
+            </div>
+            <div class="nav-content hide">
+                <ul class="panel">
+                    <li><i class="fas fa-angle-right icon"></i> <a href="#">1번 메뉴</a> </li>
+                    <li><i class="fas fa-angle-right icon"></i> <a href="#">2번 메뉴</a></li>
+                    <li><i class="fas fa-angle-right icon"></i> <a href="#">3번 메뉴</a></li>
+                    <li><i class="fas fa-angle-right icon"></i> <a href="#">4번 메뉴</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script>
+        // 모바일 레이아웃 사이즈 기준
+        var default_mobile_width = 1250;
+
+        // 플로팅 버튼 위치 정보 (모바일인 경우 무시 됨)
+        var spotInfo = {
+            'spot01' : ['30%', '35%'],
+        };
+
+        // 리사이징 이벤트
+        window.addEventListener('resize', function(event){
+            setButtonPosition();
+        });
+
+        // 페이지 로드 완료 시
+        document.addEventListener('DOMContentLoaded', function(event){
+            init();
+        });
+
+        function init(){
+            setButtonPosition();
+            setButtonEvent();
+        }
+
+        function setButtonPosition(){
+
+            for(var index in spotInfo){
+                spotPosition = spotInfo[index];
+                spotObj = document.getElementById(index);
+
+                // 모바일 기준 사이즈 이상 일 때만 웹용으로 위치 조정
+                if(window.innerWidth > default_mobile_width){
+                    spotObj.style.top = spotPosition[1];
+                    spotObj.style.left = spotPosition[0];
+                }else{
+                    spotObj.style.top = null;
+                    spotObj.style.left = null;
+                }
+            }
+        }
+
+        function setButtonEvent(){
+            btn_quick_list = document.querySelectorAll('.ly-quick-access .nav-header');
+
+            for(var i = 0; i < btn_quick_list.length; i++){
+                btn_quick = btn_quick_list[i];
+
+                btn_quick.addEventListener('click', function(e){
+                    this.classList.toggle('active');
+                    header_icon = this.querySelector('.icon');
+                    header_icon.classList.toggle('fa-angle-up');
+                    header_icon.classList.toggle('fa-angle-down');
+
+                    parent_obj = this.closest('.ly-quick-access');
+                    content = parent_obj.querySelector('.nav-content');
+                    content.classList.toggle('hide');
+                });
+            }
+
+        }
+
+    </script>
+</body>
+</html>

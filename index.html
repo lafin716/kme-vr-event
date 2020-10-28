@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KOREA MICE EXPO 2020</title>
+    <script src="js/vr-viewer.lib.js"></script>
+    <link rel="stylesheet" href="css/font-awesome/all.css">
+    <link rel="stylesheet" href="css/font.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+
+        .wrap { width: 100%; height: 100%; margin: 0px; padding: 0px; }
+        .wrap h2 { font-size: .9rem; font-weight: bold; margin: 0px; padding: 20px 0px; width: 100%; text-align: center; background: #555; color: #fff;}
+        .wrap ul { list-style: none; margin: 0px; padding: 0px; }
+        .wrap ul li { border: 1px solid #666; margin: 7px 10px; padding: 12px 10px; border-radius: 5px; font-weight: bold;}
+    </style>
+    <script>
+        function linkClick(obj){
+            var btn_link = obj.querySelector('a');
+            btn_link.click();
+        }
+    </script>
+</head>
+<body>
+    <div class="wrap">
+        <h2>VR 프로토타입</h2>
+        <ul>
+            <li onclick="linkClick(this);"><a href="type_a.html" target="_blank">TYPE A</a></li>
+            <li onclick="linkClick(this);"><a href="type_b.html" target="_blank">TYPE B</a></li>
+            <li onclick="linkClick(this);"><a href="type_c.html" target="_blank">TYPE C</a></li>
+            <li onclick="linkClick(this);"><a href="type_c_sub01.html" target="_blank">ㄴ Sub 1</a></li>
+            <li onclick="linkClick(this);"><a href="type_c_sub02.html" target="_blank">ㄴ Sub 2</a></li>
+            <li onclick="linkClick(this);"><a href="type_c_sub03.html" target="_blank">ㄴ Sub 3</a></li>
+        </ul>
+    </div>
+</body>
+</html>

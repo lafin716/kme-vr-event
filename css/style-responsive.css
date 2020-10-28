@@ -1,0 +1,81 @@
+@media screen and (max-width:1250px) {
+	#pdtViewer {
+		width: 100%
+    }
+
+    .navigation {
+        width: 100%;
+        /* top: 13rem; */
+        position: relative;
+        bottom: unset;
+        left: unset;
+        transform: unset;
+    }
+
+    .navFrameDiv .navText { font-size: 0.7rem; margin: 0 2rem; }
+    .navFrameDiv .navLeft { font-size: 2rem; }
+    .navFrameDiv .navRight { font-size: 2rem; }
+
+    .float_area {
+        position:relative;
+        background: #dadada;
+        padding: .5rem 1rem;
+    }
+
+    .ly-spot {
+        position: relative;
+        width: 20rem;
+        padding: .5rem 0rem;
+    }
+
+    .ly-spot .spot-header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 2.9rem;
+        height: 2.7rem;
+        background-color: #fffa04;
+        border: none;
+        margin-right: 1rem;
+    }
+
+    .ly-spot .spot-header .icon {
+        margin: 0px;
+        padding: 0px;
+        width: .95rem;
+        height: .95rem;
+    }
+
+    .ly-spot .spot-content {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        padding-top: 0;
+        padding-bottom: 0;
+        background-color: #ffed00;
+    }
+
+    .ly-spot .spot-content .spot-label {
+        width: 100%;
+        padding: 1rem;
+        -webkit-transform: translateX(-.4rem);
+        transform: translateX(-.4rem);
+        font-size: .7rem;
+        line-height: 105%;
+        -webkit-transition: background-color .3s ease;
+        transition: background-color .3s ease;
+        font-weight: bold;
+    }
+
+    .ly-spot .spot-content .arrow-next {
+        display: inline-block;
+        width: .95rem;
+        height: .95rem;
+        margin: 0 1rem;
+    }
+}
+
+@media screen and (max-width:1030px) {}
+@media screen and (max-width:992px) {}
+@media screen and (max-width:767px) {}

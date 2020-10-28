@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KOREA MICE EXPO 2020 :: TYPE A</title>
+    <!-- <script src="js/vr-viewer.lib.js"></script> -->
+    <link rel="stylesheet" href="css/font-awesome/all.css">
+    <link rel="stylesheet" href="css/font.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/button.css">
+    <link rel="stylesheet" href="css/style-responsive.css">
+</head>
+<body>
+    <!-- VR 영역 -->
+    <div id="pdtViewer">
+        <div id="kme_area"></div>
+    </div>
+    <div id="dummy"></div>
+    <div class="navigation"></div>
+
+    <div class="float_area">
+        <!-- 페이지 1 -->
+        <div class="ly-page">
+            <!-- 링크영역 1 -->
+            <div id="spot01" class="ly-spot">
+                <div class="spot-header">
+                    <img src="res/svg/plus.svg" alt="" class="icon">
+                </div>
+                <div class="spot-content">
+                    <span class="spot-label">1. WELCOME</span>
+                    <img src="res/svg/arrow.svg" class="arrow-next">
+                </div>
+            </div>
+
+            <!-- 링크영역 2 -->
+            <div id="spot02" class="ly-spot">
+                <div class="spot-header">
+                    <img src="res/svg/plus.svg" alt="" class="icon">
+                </div>
+                <div class="spot-content">
+                    <span class="spot-label">1. WELCOME</span>
+                    <img src="res/svg/arrow.svg" class="arrow-next">
+                </div>
+            </div>
+
+            <!-- 링크영역 3 -->
+            <div id="spot03" class="ly-spot">
+                <div class="spot-header">
+                    <img src="res/svg/plus.svg" alt="" class="icon">
+                </div>
+                <div class="spot-content">
+                    <span class="spot-label">1. WELCOME</span>
+                    <img src="res/svg/arrow.svg" class="arrow-next">
+                </div>
+            </div>
+        </div>
+
+        <!-- 페이지 2 -->
+        <div class="ly-page hide">
+            <!-- 링크영역 1 -->
+            <div id="spot04" class="ly-spot">
+                <div class="spot-header">
+                    <img src="res/svg/plus.svg" alt="" class="icon">
+                </div>
+                <div class="spot-content">
+                    <span class="spot-label">2. WELCOME</span>
+                    <img src="res/svg/arrow.svg" class="arrow-next">
+                </div>
+            </div>
+
+            <!-- 링크영역 2 -->
+            <div id="spot05" class="ly-spot">
+                <div class="spot-header">
+                    <img src="res/svg/plus.svg" alt="" class="icon">
+                </div>
+                <div class="spot-content">
+                    <span class="spot-label">2. WELCOME</span>
+                    <img src="res/svg/arrow.svg" class="arrow-next">
+                </div>
+            </div>
+
+            <!-- 링크영역 3 -->
+            <div id="spot06" class="ly-spot">
+                <div class="spot-header">
+                    <img src="res/svg/plus.svg" alt="" class="icon">
+                </div>
+                <div class="spot-content">
+                    <span class="spot-label">2. WELCOME</span>
+                    <img src="res/svg/arrow.svg" class="arrow-next">
+                </div>
+            </div>
+        </div>
+
+        <!-- 페이지 3 -->
+        <div class="ly-page hide">
+            <!-- 링크영역 1 -->
+            <div id="spot07" class="ly-spot">
+                <div class="spot-header">
+                    <img src="res/svg/plus.svg" alt="" class="icon">
+                </div>
+                <div class="spot-content">
+                    <span class="spot-label">3. WELCOME</span>
+                    <img src="res/svg/arrow.svg" class="arrow-next">
+                </div>
+            </div>
+
+            <!-- 링크영역 2 -->
+            <div id="spot08" class="ly-spot">
+                <div class="spot-header">
+                    <img src="res/svg/plus.svg" alt="" class="icon">
+                </div>
+                <div class="spot-content">
+                    <span class="spot-label">3. WELCOME</span>
+                    <img src="res/svg/arrow.svg" class="arrow-next">
+                </div>
+            </div>
+
+            <!-- 링크영역 3 -->
+            <div id="spot09" class="ly-spot">
+                <div class="spot-header">
+                    <img src="res/svg/plus.svg" alt="" class="icon">
+                </div>
+                <div class="spot-content">
+                    <span class="spot-label">3. WELCOME</span>
+                    <img src="res/svg/arrow.svg" class="arrow-next">
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Quick Access 영역 -->
+        <div class="ly-quick-access">
+            <div class="nav-header">
+                <span class="title">QUICK ACCESS</span>
+                <i class="fas fa-angle-up icon"></i>
+            </div>
+            <div class="nav-content hide">
+                <ul class="panel">
+                    <li><i class="fas fa-angle-right icon"></i> <a href="#">1번 메뉴</a> </li>
+                    <li><i class="fas fa-angle-right icon"></i> <a href="#">2번 메뉴</a></li>
+                    <li><i class="fas fa-angle-right icon"></i> <a href="#">3번 메뉴</a></li>
+                    <li><i class="fas fa-angle-right icon"></i> <a href="#">4번 메뉴</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/vr-viewer.lib.js"></script>
+    <script>
+        // 모바일 레이아웃 사이즈 기준
+        var default_mobile_width = 1250;
+
+        // VR 뷰어 정보
+        var vr_options = {
+            id : 'kme_area',    // vr을 보여줄 id
+            n : 17,             // vr 프레임 수
+            p : './img/type_a/',       // vr 이미지 경로
+            t : 'png',          // 이미지 확장자
+            frame_buttons : {   // navigation 버튼 정보
+                selector: '.navigation',    // 네비게이션이 들어갈 요소 selector
+                sector : [5,6,6],           // 각 면당 이동 시 넘길 프레임 수
+                pages : '.ly-page',         // 각 면당 이동 시 노출할 페이지들의 selector
+                navText : '······ CLICK TO TURN THE BOOTH ······' // 네비게이션 텍스트
+            }
+        };
+
+        // 플로팅 버튼 위치 정보 (모바일인 경우 무시 됨)
+        var spotInfo = {
+            'spot01' : ['50%', '45%'],
+            'spot02' : ['45%', '60%'],
+            'spot03' : ['65%', '70%'],
+
+            'spot04' : ['45%', '45%'],
+            'spot05' : ['40%', '65%'],
+            'spot06' : ['60%', '70%'],
+
+            'spot07' : ['70%', '20%'],
+            'spot08' : ['70%', '60%'],
+            'spot09' : ['45%', '45%'],
+        };
+
+        // 리사이징 이벤트
+        window.addEventListener('resize', function(event){
+            setButtonPosition();
+        });
+
+        // 페이지 로드 완료 시
+        document.addEventListener('DOMContentLoaded', function(event){
+            init();
+        });
+
+        function init(){
+            setViewer();
+            setButtonPosition();
+            setButtonEvent();
+        }
+
+        function setButtonPosition(){
+
+            for(var index in spotInfo){
+                spotPosition = spotInfo[index];
+                spotObj = document.getElementById(index);
+
+                // 모바일 기준 사이즈 이상 일 때만 웹용으로 위치 조정
+                if(window.innerWidth > default_mobile_width){
+                    spotObj.style.top = spotPosition[1];
+                    spotObj.style.left = spotPosition[0];
+                }else{
+                    spotObj.style.top = null;
+                    spotObj.style.left = null;
+                }
+            }
+        }
+
+        function setButtonEvent(){
+            btn_quick_list = document.querySelectorAll('.ly-quick-access .nav-header');
+
+            for(var i = 0; i < btn_quick_list.length; i++){
+                btn_quick = btn_quick_list[i];
+
+                btn_quick.addEventListener('click', function(e){
+                    this.classList.toggle('active');
+                    header_icon = this.querySelector('.icon');
+                    header_icon.classList.toggle('fa-angle-up');
+                    header_icon.classList.toggle('fa-angle-down');
+
+                    parent_obj = this.closest('.ly-quick-access');
+                    content = parent_obj.querySelector('.nav-content');
+                    content.classList.toggle('hide');
+                });
+            }
+
+        }
+
+        function setViewer(){
+            VR_Viewer(vr_options);
+        }
+
+    </script>
+</body>
+</html>
