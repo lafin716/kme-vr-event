@@ -10,41 +10,10 @@
     <link rel="stylesheet" href="css/style.css">
     <style>
 
-        .ly-contact {
-            position: absolute;
-            top: 50%;
-            left: 0px;
-        }
+        body { background: #dadada; }
     </style>
 </head>
 <body>
-    <!-- VR 영역 -->
-    <div id="pdtViewer">
-        <div id="kme_area1"></div>
-    </div>
-    <div id="dummy"></div>
-
-    <!-- 링크영역 -->
-    <div class="ly-link"></div>
-
-    <!-- Quick Access 영역 -->
-    <div class="ly-quick-access"></div>
-
-    <!-- 상담영역 -->
-    <div class="ly-contact">
-        <ul>
-            <li>상담신청</li>
-            <li>문의하기</li>
-        </ul>
-    </div>
-
-    <script>
-        var path = './img/';
-        var frame_opt = {
-            sector : [5,6,6],
-            navText : '······ CLICK TO TURN THE BOOTH ······'
-        };
-        VR_Viewer('kme_area1', 17, path, 'png', false, false, false, false, false, false, false, frame_opt);   //buttonNavigation
-    </script>
+    <img src="res/svg/contact.svg" alt="">
 </body>
 </html>

@@ -21,7 +21,7 @@
 
     <div class="float_area">
         <!-- 페이지 1 -->
-        <div class="ly-page">
+        <div class="ly-page hide">
             <!-- 링크영역 1 -->
             <div id="spot01" class="ly-spot">
                 <div class="spot-header">
@@ -57,7 +57,7 @@
         </div>
 
         <!-- 페이지 2 -->
-        <div class="ly-page hide">
+        <div class="ly-page">
             <!-- 링크영역 1 -->
             <div id="spot04" class="ly-spot">
                 <div class="spot-header">
@@ -157,7 +157,7 @@
             </li>
             <li>
                 <a href="#" class="contact-cell">
-                    <img src="res/svg/contact.svg" class="icon-box">
+                    <img src="res/svg/contact.svg" class="icon-box big">
                     <span class="desc">문의하기</span>
                 </a>
             </li>
@@ -171,13 +171,14 @@
 
         // VR 뷰어 정보
         var vr_options = {
-            id : 'kme_area',    // vr을 보여줄 id
-            n : 17,             // vr 프레임 수
-            p : './img/type_a/',       // vr 이미지 경로
-            t : 'png',          // 이미지 확장자
-            frame_buttons : {   // navigation 버튼 정보
+            id : 'kme_area',        // vr을 보여줄 id
+            n : 17,                 // vr 프레임 수
+            p : './img/type_a/',    // vr 이미지 경로
+            t : 'png',              // 이미지 확장자
+            frame_buttons : {       // navigation 버튼 정보
                 selector: '.navigation',    // 네비게이션이 들어갈 요소 selector
-                sector : [5,6,6],           // 각 면당 이동 시 넘길 프레임 수
+                start_sector : 2,           // 시작할 면을 설정
+                sector : [1,9,17],          // 각 면당 보여줄 이미지 번호
                 pages : '.ly-page',         // 각 면당 이동 시 노출할 페이지들의 selector
                 navText : '······ CLICK TO TURN THE BOOTH ······' // 네비게이션 텍스트
             }

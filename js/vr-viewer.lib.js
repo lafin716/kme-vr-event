@@ -36,17 +36,27 @@ function VR_Viewer(params) {
     // console.log(`${call}-${id}-${playable ? 'playable ' : ''}${autoPlay ? 'autoPlay ' : ''}${draggable ? 'draggable ' : ''}${mouseMove ? 'mouseMove ' : ''}${buttons ? 'buttons ' : ''}${keys ? 'keys' : ''}${scroll ? 'scroll ' : ''}${frame_buttons ? 'frame_buttons ' : ''}`);
     call++;
     loaderNone(id);
-    var i = 1, j = 0, move = [],
-        mainDiv = document.querySelector(`#${id}`);
+
+    var i = 1;
+    var j = 0;
+    var move = [];
+    var mainDiv = document.querySelector(`#${id}`);
+
+    // 시작 프레임 설정
+    if(options.frame_buttons && options.frame_buttons.start_sector){
+        i = options.frame_buttons.sector[options.frame_buttons.start_sector - 1];
+    }
+
     mainDiv.className = 'viewer';
     mainDiv.innerHTML += `<img class="${id} ${playable ? 'playable ' : ''}${autoPlay ? 'autoPlay ' : ''}${draggable ? 'draggable ' : ''}${mouseMove ? 'mouseMove ' : ''}${buttons ? 'buttons ' : ''}${keys ? 'keys ' : ''}${scroll ? 'scroll ' : ''}${frame_buttons ? 'frame_buttons ' : ''}" draggable="false" src='${p}${i}.${t}'>`;
     mainDiv.innerHTML +=
            '<div class="loader"><div class="three-bounce"><div class="one"></div><div class="two"></div><div class="three"></div></div></div>'
 
-    if (call == 1)
+    if (call == 1){
         for (var k = 1; k <= n; k++) {
             document.getElementById('dummy').innerHTML += `<img src='${p}${k}.${t}'>`;
         }
+    }
 
     var img = document.querySelector(`#${id} .${id}`);
 
@@ -158,7 +168,7 @@ function VR_Viewer(params) {
 
         if (frame_buttons) {
             var navigation_wrap = document.querySelector(frame_buttons.selector);
-            var frame_index = 0;
+            var frame_index = options.frame_buttons.start_sector ? options.frame_buttons.start_sector - 1 : 0;
             var frame_count = frame_buttons.sector.length;
             var nav_text = frame_buttons.navText;
             var duration = 50;
@@ -316,41 +326,34 @@ function VR_Viewer(params) {
         }
     }
 
+    
     var frame_running = false;
-    function frame_prev(count, duration, callback){
-
-        tmp_cnt = 0;
-
+    function frame_prev(sector_index, duration, callback){
         if(frame_running) return false;
         frame_running = true;
         interval = setInterval(function () {
-            prev(img);
 
-            ++tmp_cnt;
-            if(count <= tmp_cnt) {
+            if(i <= sector_index) {
                 clearInterval(interval);
-                console.log(frame_index);
                 callback(frame_index);
                 frame_running = false;
+            }else{
+                prev(img);
             }
         }, duration);
     }
 
-    function frame_next(count, duration, callback){
-
-        tmp_cnt = 0;
-
+    function frame_next(sector_index, duration, callback){
         if(frame_running) return false;
         frame_running = true;
         interval = setInterval(function () {
-            nxt(img);
-
-            ++tmp_cnt;
-            if(count <= tmp_cnt){
+            
+            if(i >= sector_index){
                 clearInterval(interval);
-                console.log(frame_index);
                 callback(frame_index);
                 frame_running = false;
+            }else{
+                nxt(img);
             }
         }, duration);
     }

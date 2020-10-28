@@ -1,4 +1,9 @@
 @media screen and (max-width:1250px) {
+
+    body {
+        overflow-y: auto;
+    }
+
 	#pdtViewer {
 		width: 100%
     }
@@ -20,11 +25,12 @@
         position:relative;
         background: #dadada;
         padding: .5rem 1rem;
+        overflow-y: auto;
     }
 
     .ly-spot {
         position: relative;
-        width: 21rem;
+        width: 25rem;
         padding: .5rem 0rem;
     }
 
@@ -112,7 +118,7 @@
     }
 
     .contact-wrap .contact-cell .icon-box.big{
-        width: 1.5rem;
+        width: 1.8rem;
         margin-bottom: .4rem;
     }
 
