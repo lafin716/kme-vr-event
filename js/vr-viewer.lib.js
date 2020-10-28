@@ -196,7 +196,7 @@ function VR_Viewer(params) {
             leftNavBtn.setAttribute('title', 'left navigation');
             btnsDiv.appendChild(leftNavBtn);
             leftNavBtn.addEventListener('click', function () {
-                if(frame_index > 0){
+                if(frame_index > 0 && !frame_running){
                     frame_prev(frame_buttons.sector[frame_index - 1], duration, callback);
                     --frame_index;
                 }
@@ -213,7 +213,7 @@ function VR_Viewer(params) {
             rightNavBtn.setAttribute('title', 'right navigation');
             btnsDiv.appendChild(rightNavBtn);
             rightNavBtn.addEventListener('click', function () {
-                if(frame_index < frame_count - 1){
+                if(frame_index < frame_count - 1 && !frame_running){
                     frame_next(frame_buttons.sector[frame_index + 1], duration, callback);
                     ++frame_index;
                 }
