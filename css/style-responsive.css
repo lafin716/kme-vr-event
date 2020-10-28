@@ -83,7 +83,6 @@
         left: 0px;
         background-color: #ffed00;
         z-index: 9999;
-        cursor: pointer;
         border-top: 1px solid #dadada;
         transform: unset;
         top: unset;
@@ -104,6 +103,7 @@
         align-items: center;
         justify-content: center;
         padding: 1rem .8rem;
+        cursor: pointer;
     }
 
     .contact-wrap .contact-cell .icon-box {

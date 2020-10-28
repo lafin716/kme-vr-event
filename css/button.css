@@ -55,12 +55,6 @@
 }
 
 /* 퀵 메뉴 버튼 */
-.ly-contact {
-    position: absolute;
-    top: 50%;
-    left: 0px;
-}
-
 .ly-quick-access {
     width: 20rem;
     display: inline-block;
@@ -120,7 +114,6 @@
     transform: translateY(-50%);
     background-color: #ffed00;
     z-index: 9999;
-    cursor: pointer;
     border: 1px solid #dadada;
  }
 
@@ -139,6 +132,7 @@
      justify-content: center;
      width: 4.3rem;
      padding: 1rem .8rem;
+     cursor: pointer;
  }
 
  .contact-wrap .contact-cell .icon-box {
