@@ -20,19 +20,23 @@ h4 {
 }
 
 #pdtViewer {
-	width: 70%;
+	height: 100vh;
 	margin: 0px auto
+}
+
+#pdtViewer img {
+	height: 100vh;
+	/* padding: 40px 20px; */
+	user-select: none;
+	-moz-user-select: none
 }
 
 #pdtViewer.no-vr{
 	width: 100%;
 }
 
-#pdtViewer img {
+#pdtViewer.no-vr img{
 	width: 100%;
-	/* padding: 40px 20px; */
-	user-select: none;
-	-moz-user-select: none
 }
 
 #dummy {

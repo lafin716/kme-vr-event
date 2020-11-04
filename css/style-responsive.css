@@ -1,3 +1,16 @@
+@media screen and (max-width:1270px) {
+    /* #pdtViewer {
+        width: 100%;
+        height: unset;
+    }
+
+    #pdtViewer img {
+        width: 100%;
+        height: unset;
+    } */
+}
+
+
 @media screen and (max-width:1250px) {
 
     body {
@@ -5,11 +18,18 @@
     }
 
 	#pdtViewer {
-		width: 100%
+        width: 100%;
+        height: unset;
+    }
+    
+    #pdtViewer img {
+        width: 100%;
+        height: unset;
     }
 
     .navigation {
         width: 100%;
+        height: unset;
         /* top: 13rem; */
         position: relative;
         bottom: unset;
@@ -32,6 +52,10 @@
         position: relative;
         width: 95%;
         padding: .5rem 0rem;
+    }
+
+    .ly-spot.mobile {
+        display: inline-flex;
     }
 
     .ly-spot .spot-header {
@@ -128,6 +152,11 @@
     }
 
     .line, .ly-quick-access { display: none; }
+
+     /* 모바일 전용 배경색 추가 */
+    .m-bg-incentive { background-color: #339966 !important; border-color: rgba(51,153,102,.5) !important; }
+    .m-bg-infra { background-color: #333366 !important; border-color: rgba(51,51,102,.5) !important; }
+    .m-bg-service { background-color: #009999 !important; border-color: rgba(0,153,153,.5) !important; }
 }
 
 @media screen and (max-width:1030px) {}

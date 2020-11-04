@@ -8,6 +8,11 @@
     position: absolute;
 }
 
+/* 모바일에서만 노출 */
+.ly-spot.mobile {
+    display: none;
+}
+
 .spot-header {
     display: flex;
     flex-direction: column;
@@ -59,8 +64,8 @@
     width: 20rem;
     display: inline-block;
     position: absolute;
-    bottom: 130px;
-    right: 130px;
+    top: 5rem;
+    right: 10rem;
 }
 
 .nav-header {
@@ -150,3 +155,9 @@
  }
 
  .line { width: 70%; border-top: 1px solid #555; margin: 0 auto; }
+
+
+ /* 배경색 추가 */
+.bg-incentive { background-color: #339966 !important; border-color: rgba(51,153,102,.5) !important; }
+.bg-infra { background-color: #333366 !important; border-color: rgba(51,51,102,.5) !important; }
+.bg-service { background-color: #009999 !important; border-color: rgba(0,153,153,.5) !important; }
