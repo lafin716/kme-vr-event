@@ -20,18 +20,21 @@ h4 {
 }
 
 #pdtViewer {
+	width: 100vw;
 	height: 100vh;
 	margin: 0px auto
 }
 
 #pdtViewer img {
+	width: 100vw;
 	height: 100vh;
-	/* padding: 40px 20px; */
+	object-fit: cover;
+	object-position: left top;
 	user-select: none;
 	-moz-user-select: none
 }
 
-#pdtViewer.no-vr{
+/* #pdtViewer.no-vr{
 	width: 100%;
 	height: unset;
 }
@@ -39,7 +42,7 @@ h4 {
 #pdtViewer.no-vr img{
 	width: 100%;
 	height: unset;
-}
+} */
 
 #dummy {
 	display: none

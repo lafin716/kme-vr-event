@@ -1,13 +1,7 @@
-@media screen and (max-width:1270px) {
-    /* #pdtViewer {
-        width: 100%;
-        height: unset;
-    }
-
+@media screen and (min-width:1250px) {
     #pdtViewer img {
-        width: 100%;
-        height: unset;
-    } */
+        object-position: 45% center;
+    }
 }
 
 
@@ -21,11 +15,14 @@
         width: 100%;
         height: unset;
     }
-    
+
     #pdtViewer img {
         width: 100%;
         height: unset;
+        object-position: 25% center;
     }
+
+    
 
     .navigation {
         width: 100%;

@@ -11,7 +11,6 @@ var default_mobile_width = 1250;
 
 // 리사이징 이벤트
 window.addEventListener('resize', function(event){
-    setVRResize();
     setButtonPosition();
 });
 
@@ -22,7 +21,6 @@ document.addEventListener('DOMContentLoaded', function(event){
 
 function init(){
     setViewer();
-    setVRResize();
     setButtonPosition();
     setButtonEvent();
 }
