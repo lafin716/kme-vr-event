@@ -29,13 +29,14 @@ function init(){
 
 // PC 버전일 때 화면 크기에 맞춰 VR에 맞추기 위해 버튼 리사이징
 function setVRResize(){
+    if(!useVR) return false;
+
     // 모바일 기준 사이즈 이상이고 VR 최대크기 이하일 때만 리사이징
     if(window.innerWidth > default_mobile_width && window.innerWidth < default_vr_maximum_width){        
 
         // 창 사이즈와 VR 사이즈 차이값
         window_difference = (default_vr_maximum_width - window.innerWidth) / 2;
         vrObj.setAttribute('style','transform:translateX(-'+window_difference+'px)');
-        console.log(window_difference);
     }else{
         vrObj.setAttribute('style','transform:unset');
     }
@@ -79,5 +80,6 @@ function setButtonEvent(){
 }
 
 function setViewer(){
+    if(!useVR) return false;
     VR_Viewer(vr_options);
 }
