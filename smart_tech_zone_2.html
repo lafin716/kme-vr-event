@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KOREA MICE EXPO 2020 :: Smart Tech Zone 2</title>
+    <!-- <script src="js/vr-viewer.lib.js"></script> -->
+    <link rel="stylesheet" href="css/font-awesome/all.css">
+    <link rel="stylesheet" href="css/font.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/button.css">
+    <link rel="stylesheet" href="css/style-responsive.css">
+</head>
+<body>
+    <!-- VR 영역 -->
+    <div id="pdtViewer" class="no-vr">
+        <img src="img/techzone_2/1.png">
+    </div>
+
+    <div class="float_area">
+        <!-- 페이지 1 -->
+        <div class="ly-page">
+            <!-- 링크영역 1 -->
+            <div id="spot01" class="ly-spot">
+                <div class="spot-header">
+                    <img src="res/svg/plus.svg" alt="" class="icon">
+                </div>
+                <div class="spot-content">
+                    <span class="spot-label">FOLDER 1</span>
+                    <img src="res/svg/arrow.svg" class="arrow-next">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="ly-contact">
+        <ul class="contact-wrap">
+            <li>
+                <a href="#" class="contact-cell">
+                    <img src="res/svg/phone.svg" class="icon-box big">
+                    <span class="desc">상담신청</span>
+                </a>
+                <div class="line"></div>
+            </li>
+            <li>
+                <a href="#" class="contact-cell">
+                    <img src="res/svg/contact.svg" class="icon-box big">
+                    <span class="desc">문의하기</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <script>
+        // VR 사용여부
+        var useVR = false;
+
+        // 플로팅 버튼 위치 정보 (모바일인 경우 무시 됨)
+        var spotInfo = {
+            'spot01' : ['70vw', '60vh'],
+        };
+
+    </script>
+    <script src="js/vr-util.js"></script>
+</body>
+</html>

@@ -161,3 +161,17 @@
 .bg-incentive { background-color: #339966 !important; border-color: rgba(51,153,102,.5) !important; }
 .bg-infra { background-color: #333366 !important; border-color: rgba(51,51,102,.5) !important; }
 .bg-service { background-color: #009999 !important; border-color: rgba(0,153,153,.5) !important; }
+
+
+/* 스마트 테크존 전용 */
+.page-content.mobile {display: none;}
+.page-content.pc {
+    width: 20rem;
+    position: absolute;
+    top: 40vh;
+    right: 10vw;
+    transform: translateY(-50%);
+    background-color: #ffed00;
+    z-index: 9999;
+    border: 1px solid #dadada;
+}

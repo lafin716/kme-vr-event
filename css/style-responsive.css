@@ -43,6 +43,7 @@
         background: #dadada;
         padding: .5rem 0rem;
         text-align: center;
+        padding-bottom: 13rem;
     }
 
     .ly-spot {
@@ -154,6 +155,10 @@
     .m-bg-incentive { background-color: #339966 !important; border-color: rgba(51,153,102,.5) !important; }
     .m-bg-infra { background-color: #333366 !important; border-color: rgba(51,51,102,.5) !important; }
     .m-bg-service { background-color: #009999 !important; border-color: rgba(0,153,153,.5) !important; }
+
+    /* 스마트 테크존 전용 */
+    .page-content.mobile { display: block; }
+    .page-content.pc { display: none; }
 }
 
 @media screen and (max-width:1030px) {}

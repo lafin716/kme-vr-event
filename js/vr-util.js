@@ -41,6 +41,7 @@ function setVRResize(){
 }
 
 function setButtonPosition(){
+    if(spotInfo.length == 0) return false;
 
     for(var index in spotInfo){
         spotPosition = spotInfo[index];
