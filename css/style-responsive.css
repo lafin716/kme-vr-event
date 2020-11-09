@@ -11,7 +11,12 @@
         overflow-y: auto;
     }
 
+    body::-webkit-scrollbar {
+        display: none;
+    }
+
 	#pdtViewer {
+        position: relative;
         width: 100%;
         height: unset;
     }
@@ -21,8 +26,6 @@
         height: unset;
         object-position: 25% center;
     }
-
-    
 
     .navigation {
         width: 100%;
