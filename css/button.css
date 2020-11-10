@@ -163,14 +163,50 @@
 .bg-service { background-color: #009999 !important; border-color: rgba(0,153,153,.5) !important; }
 
 
+/* 뒤로가기 버튼 */
+.back_area {
+    position: absolute;
+    top: 5rem;
+    left: 0;
+    background: #ffed00;
+    z-index: 9999;
+    display: flex;
+    padding: 0.4rem 1rem;
+}
+
+.back_area.only_mobile {
+    display: none;
+}
+
+.back_area .btn_back {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.back_area .btn_back .arrow-back {
+    width: 1rem;
+    transform: rotateY(180deg);
+}
+
+.back_area .btn_back .desc {
+    font-size: 10pt;
+    font-weight: bold;
+    margin-left: .2rem;
+}
+
+.back_area .btn_back .plus-back {
+    display: none;
+}
+
 /* 스마트 테크존 전용 */
 .page-content.mobile {display: none;}
 .page-content.pc {
     width: 20rem;
     position: absolute;
-    top: 40vh;
+    top: 10vh;
     right: 10vw;
-    transform: translateY(-50%);
     background-color: #ffed00;
     z-index: 9999;
     border: 1px solid #dadada;

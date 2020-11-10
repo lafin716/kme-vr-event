@@ -41,7 +41,7 @@ function setVRResize(){
 }
 
 function setButtonPosition(){
-    if(spotInfo.length == 0) return false;
+    if(typeof(spotInfo) == 'undefined' || spotInfo.length == 0) return false;
 
     for(var index in spotInfo){
         spotPosition = spotInfo[index];
@@ -59,7 +59,8 @@ function setButtonPosition(){
 }
 
 function setButtonEvent(){
-    btn_quick_list = document.querySelectorAll('.ly-quick-access .nav-header');
+    parent_class_name = typeof(folder_parent_class) != 'undefined' ? folder_parent_class : '.ly-quick-access';
+    btn_quick_list = document.querySelectorAll(parent_class_name + ' .nav-header');
 
     for(var i = 0; i < btn_quick_list.length; i++){
         btn_quick = btn_quick_list[i];
@@ -70,7 +71,7 @@ function setButtonEvent(){
             header_icon.classList.toggle('fa-angle-up');
             header_icon.classList.toggle('fa-angle-down');
 
-            parent_obj = this.closest('.ly-quick-access');
+            parent_obj = this.closest(parent_class_name);
             content = parent_obj.querySelector('.nav-content');
             content.classList.toggle('hide');
         });
